@@ -4,6 +4,7 @@ temp
 dist
 dist.crx
 dist/
+*.zip
 *.pem
 .sass-cache
 app/bower_components
