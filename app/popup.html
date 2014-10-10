@@ -15,10 +15,13 @@
   <body>
 
     <div ng-controller="MainController">
-        <h1>Add a world clock</h1>
-         <select ng-model="myselect" ng-options="o as o for o in zones"><option value="">Select</option></select>
-
-        <button class="btn btn-info" ng-click="contribute()">Contribute</button>
+        <h2>{{displayTime}}</h2>
+        <h1>{{displayHour}}</h1>
+        <div ng-if="showAddForm">
+              <select class="form-control" ng-model="current" ng-options="zone for zone in zones" ng-change="changeTimeZone()">
+                  <option>Select a timezone</option>
+              </select>
+        </div>
     </div>
 
     <!-- build:js popup.js -->
